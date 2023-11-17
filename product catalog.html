@@ -1,30 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 5 Website Example</title>
+  <title>Product Description</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" type="text/css" href="catalogue.css" />
   <style>
+     .main-content {
+            padding: 2em;
+        }
+        
+        a:hover:before,
+        a:hover:after{
+        transform: translate(0,0);
+        opacity: 1;
+        }
+
+        a:hover {
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+            -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+            -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+            transition: all 0.4s ease 0s;
+        }
   .fakeimg {
     height: 200px;
     background: #aaa;
   }
-  .dropdown
+  .formcheck
   {
-    left:0px;
+    right:0px;
   }
   img.one{
     height:400px;
     width:300px;
   }
   
-
+  .button
+  {
+    background: #a786df;
+  }
+  #NavigationBar, #Footer {
+            background-color: #a786df;
+            
+        }
+        #NavigationBar a, #Footer a{
+            color: #f9f8fc;
+        }
   </style>
 </head>
 <body>
+    <header>
+        <div id="DiscountBar" class="d-flex justify-content-around w-100 h-50 bg-dark">
+            <p id="Prices" class="text-light text-center pt-3 ps-3">SGD</p>
+            <p id="Discount" class="text-light pt-3">FREE SHIPPING FOR ALL ITEMS FROM 23 NOV TO 28 NOV! SHOP NOW</p>
+            <p id="Support" class="text-light text-center pt-3 ps-3">Support    </p>
+        </div>
+        <div id="NavigationBar" class="d-flex justify-content-between w-100">
+            <img class="" src="images/logo.png">
+            <div class="d-flex justify-content-start">
+                <a href="checkout.html"  class="p-2 text-decoration-none" >Ecommerce</a>
+                <a href="/" class="p-2 text-decoration-none" >Shop</a>
+                <a href="/" class="p-2 text-decoration-none" >Stories</a>
+                <a href="/" class="p-2 text-decoration-none" >About</a>
+                <a href="/" class="p-2 text-decoration-none" >Search</a>
+            </div>
+            <div class="d-flex justify-content-end">
+                <a href="/" class="p-2 text-decoration-none">Cart</a>
+                <a href="/" class="p-2 text-decoration-none">Login</a>
+            </div>
+        </div>
+    </header>
     <main class="wrapper">
         <section class="hero">
         <h1>Women's sportswear
@@ -36,33 +84,17 @@
         </section>
 
 <br></br>
-          
-<!-- <div class="p-5 bg-primary text-white text-center">Fake Image</div> -->
-<!-- <img src="hack/hack pics/julia-rekamie-Z72YujnOrlY-unsplash.jpg" alt="Italian Trulli">
-<p>Some text..</p> -->
 
-<div class="dropdown">
-    <button type="button"
-        class="btn btn-success dropdown-toggle"
-        data-toggle="dropdown">
-        Select CS Subjects
-    </button>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">
-            Most popular
-        </a>
-        <a class="dropdown-item" href="#">
-            Latest
-        </a>
-        <a class="dropdown-item" href="#">
-            High to Low
-        </a>
-        <a class="dropdown-item" href="#">
-            Low to High
-        </a>
+   <div class="w3-dropdown-hover w3-right">
+    <button class="w3-button w3-pink">Dropdown</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
+      <a href="#" class="w3-bar-item w3-button">Most Popular</a>
+      <a href="#" class="w3-bar-item w3-button">Latest</a>
+      <a href="#" class="w3-bar-item w3-button">High to Low</a>
+      <a href="#" class="w3-bar-item w3-button">Low to high</a>
     </div>
-</div>
-
+  </div>
+  <div class="w3-clear"></div>
   <br></br>
 <div class="container mt-5">
   <div class="row">
@@ -84,9 +116,10 @@
             <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
             <label class="form-check-label">Shirt</label>
           </div>
+          <br></br>
           <h2>Colours</h2>
       <div class="form-check">
-        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Blue
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Black
         <label class="form-check-label" for="radio1"></label>
       </div>
       <div class="form-check">
@@ -94,7 +127,7 @@
         <label class="form-check-label" for="radio2"></label>
       </div>
       <div class="form-check">
-        <input type="radio" class="form-check-input" disabled>Green
+        <input type="radio" class="form-check-input" disabled>White
         <label class="form-check-label"></label>
       </div>
      
@@ -143,8 +176,46 @@
    
 </div>
 
-  <p>Footer</p>
-</div>
+
+<footer class="bg-light p-2">
+    <div id="Footer" class="d-flex p-2">
+        <div id="Newsletter" class=" w-50 p-4">
+            <h2>Sign up for our newsletter</h2>
+            <p class="text-start ">Be the first to know about our special offers, new product launches, and events</p>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+                <a href = "mailto: gudivada.srinija@yahoo.com ?
+                cc = rmanbayjm@gmail.com & bcc = abc@gmail.com &
+                ubject = Please Follow Us" class="input-group-text text-decoration-none">Send Mail </a>
+              </div>
+            
+        </div>
+        <div id="Shop" class="d-flex flex-column mb-3 w-25">
+            <p class="fw-medium fs-5 text-start mb-1">Shop</p>
+            <a href="" class="text-start fs-5 text-decoration-none">Leggings</a>
+            <a href="" class="text-start fs-5 text-decoration-none">Sports Bra</a>
+            <a href="" class="text-start fs-5 text-decoration-none">Shirts</a>
+            <a href="" class="text-start fs-5 text-decoration-none">Shorts</a>
+        </div>
+        <div id="Help" class="d-flex flex-column mb-3  w-25">
+            <p class="fw-medium fs-5 text-start mb-1">Help</p>
+            <a href="" class="text-start fs-5 text-decoration-none">Help Center</a>
+            <a href="" class="text-start fs-5 text-decoration-none">Order Status</a>
+            <a href="" class="text-start fs-5 text-decoration-none">Size Chart</a>
+            <a href="" class="text-start fs-5 text-decoration-none">Returns & Warranty</a>
+            <a href="" class="text-start fs-5 text-decoration-none">Contact Us</a>
+        </div>
+        <div id="About" class="d-flex flex-column mb-3  w-25">
+            <p class="fw-medium fs-5 text-start mb-1">About</p>
+            <a href="" class="text-start fs-5 text-decoration-none">About Us</a>
+            <a href="" class="text-start fs-5 text-decoration-none">Responsibility</a>
+            <a href="" class="text-start fs-5 text-decoration-none">Technology & Innovation</a>
+            <a href="" class="text-start fs-5 text-decoration-none">Explore our stories</a>
+        </div>
+    </div>
+    <p>Created by Harsha, Srinija, Leyi, Sylvia</p>
+</footer>
+
 
 </body>
 </html>
