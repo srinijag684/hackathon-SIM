@@ -64,9 +64,36 @@
             #AddToCart{
                 margin-left: 40px;
             }
+            #NavigationBar, #Footer {
+            background-color: #a786df;
+            
+            }
+            #NavigationBar a, #Footer a{
+                color: #f9f8fc;
+            }
         </style>
     </head>
-    
+    <header>
+        <div id="DiscountBar" class="d-flex justify-content-around w-100 h-50 bg-dark">
+            <p id="Prices" class="text-light text-center pt-3 ps-3">SGD</p>
+            <p id="Discount" class="text-light pt-3">FREE SHIPPING FOR ALL ITEMS FROM 23 NOV TO 28 NOV! SHOP NOW</p>
+            <p id="Support" class="text-light text-center pt-3 ps-3">Support    </p>
+        </div>
+        <div id="NavigationBar" class="d-flex justify-content-between w-100">
+            <img class="" src="images/logo.png">
+            <div class="d-flex justify-content-start">
+                <a href="checkout.html"  class="p-2 text-decoration-none" >Ecommerce</a>
+                <a href="/" class="p-2 text-decoration-none" >Shop</a>
+                <a href="/" class="p-2 text-decoration-none" >Stories</a>
+                <a href="/" class="p-2 text-decoration-none" >About</a>
+                <a href="/" class="p-2 text-decoration-none" >Search</a>
+            </div>
+            <div class="d-flex justify-content-end">
+                <a onclick="gotoCart()" class="p-2 text-decoration-none">Cart</a>
+                <a href="/" class="p-2 text-decoration-none">Login</a>
+            </div>
+        </div>
+    </header>
     <body class="w-100 m-3">
         <div class="d-flex flex-row bd-highlight mb-3">
             <div id="ProductPhoto" class="w-50 h-auto">
@@ -101,6 +128,45 @@
             </div>
         </div>
     </body>
+    <footer class="bg-light p-2">
+        <div id="Footer" class="d-flex p-2">
+            <div id="Newsletter" class=" w-50 p-4">
+                <h2>Sign up for our newsletter</h2>
+                <p class="text-start ">Be the first to know about our special offers, new product launches, and events</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+                    <a href = "mailto: gudivada.srinija@yahoo.com ?
+                    cc = rmanbayjm@gmail.com & bcc = abc@gmail.com &
+                    ubject = Please Follow Us" class="input-group-text text-decoration-none">Send Mail </a>
+                  </div>
+                
+            </div>
+            <div id="Shop" class="d-flex flex-column mb-3 w-25">
+                <p class="fw-medium fs-5 text-start mb-1">Shop</p>
+                <a href="" class="text-start fs-5 text-decoration-none">Leggings</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Sports Bra</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Shirts</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Shorts</a>
+            </div>
+            <div id="Help" class="d-flex flex-column mb-3  w-25">
+                <p class="fw-medium fs-5 text-start mb-1">Help</p>
+                <a href="" class="text-start fs-5 text-decoration-none">Help Center</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Order Status</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Size Chart</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Returns & Warranty</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Contact Us</a>
+            </div>
+            <div id="About" class="d-flex flex-column mb-3  w-25">
+                <p class="fw-medium fs-5 text-start mb-1">About</p>
+                <a href="" class="text-start fs-5 text-decoration-none">About Us</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Responsibility</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Technology & Innovation</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Explore our stories</a>
+            </div>
+        </div>
+        <p>Created by Harsha, Srinija, Leyi, Sylvia</p>
+    </footer>
+
     <script>
     function chooseSize(size){
         element = document.getElementsByName("size");

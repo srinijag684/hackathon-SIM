@@ -42,6 +42,120 @@
         #NavigationBar a, #Footer a{
             color: #f9f8fc;
         }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        section{
+            height:50vh;
+        }
+        /************** Slideshow Background **************/
+
+        /* Style for the slideshow container */
+        .slideshow-container {
+            position: absolute;
+            top: 100;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+        }
+
+        /* Style for individual slideshow images */
+        .slideshow-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .category{
+            padding: 20px;
+
+        }
+
+        h1{
+            padding-bottom:20px;
+        }
+
+
+        .grid-container {
+            display: grid;
+            column-gap: 30px;
+            grid-template-columns: auto auto auto;
+            background-color: #ffffff;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgrgba(53, 53, 53, 0.8);
+            /* padding: 10px; */
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .grid-item img{
+            width:300px;
+            height:500px;
+            object-fit: cover;
+            /* padding-top: 30px;
+            padding-bottom: 50px;
+            border:1px solid rgb(62, 62, 62);
+            border-radius: 1em; */
+        }
+
+        .grid-item video{
+            width:300px;
+            height:500px;
+            object-fit: cover;
+        }
+
+
+        /* Banner css */
+
+        .new {
+            position: relative;
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            /* max-height:200px; */
+            /* max-width: 400px; */
+        }
+        
+        .new img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .new .btn {
+            position: absolute;
+            top: 50%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #7e80ea;
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            width: 200px;
+            height: 80px;
+        }
+        
+        .new .btn:hover {
+            background-color: rgb(255, 255, 255);
+            color: #7e80ea;
+        }
         
     </style>
 
@@ -56,30 +170,121 @@
             <p id="Support" class="text-light text-center pt-3 ps-3">Support    </p>
         </div>
         <div id="NavigationBar" class="d-flex justify-content-between w-100">
-            <img class="" src="images/logo.png">
+            <img class="w-25 h-25" src="img/logo.png">
             <div class="d-flex justify-content-start">
-                <a href="checkout.html"  class="p-2 text-decoration-none" >Ecommerce</a>
-                <a href="/" class="p-2 text-decoration-none" >Shop</a>
-                <a href="/" class="p-2 text-decoration-none" >Stories</a>
-                <a href="/" class="p-2 text-decoration-none" >About</a>
-                <a href="/" class="p-2 text-decoration-none" >Search</a>
+                <a href="checkout.html"  class="p-2 text-decoration-none fs-6" >Ecommerce</a>
+                <a href="product catalog.html" class="p-2 text-decoration-none fs-6" >Shop</a>
+                <a href="" class="p-2 text-decoration-none fs-5" >Stories</a>
+                <a href="" class="p-2 text-decoration-none fs-5" >About</a>
+                <a href="" class="p-2 text-decoration-none fs-5" >Search</a>
             </div>
             <div class="d-flex justify-content-end">
-                <a href="/" class="p-2 text-decoration-none">Cart</a>
+                <a onclick="gotoCart()" class="p-2 text-decoration-none">Cart</a>
                 <a href="/" class="p-2 text-decoration-none">Login</a>
             </div>
         </div>
     </header>
-
-    <div class="main-content">
-        <h2>Created by women for women</h2>
-        <p>This is where you can introduce your product or service.</p>
-        <button>Shop all</button>
-        
+    
+    <div class="main-content d-flex">
+        <div class="w-75">
+            <h2>Created by women for women</h2>
+            <p>This is where you can introduce your product or service.</p>
+            <button>Shop all</button>
+        </div>
+        <div class="w-25">
+            <iframe src="cart.html" id="shoppingCart" style="width: 400px; height: 1000px; display: none;"></iframe>
+        </div>
+    </div>
+    
+    <section>
+        <div class="slideshow-container"></div>
+    </section>
+    
+    <div class="category">
+        <h1>Categories</h1>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="img/img5.jpg" alt="">
+                <p>Sports Bras</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/img6.jpg" alt="">
+                <p>Leggings</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/img7.jpg" alt="">
+                <p>Tops</p>
+            </div> 
+          </div>
     </div>
 
-    
 
+    <div class="new">
+        <img src="img/new.png" alt="banner" style="width:100%">
+        <a href="/signup.html"><button class="btn">Join Now</button></a>
+    </div>
+
+    <div class="reviews">
+        <h1>Reviews</h1>
+        <div class="grid-container">
+            <div class="grid-item">
+                <video autoplay loop controls="false">
+                    <source src="img/vid1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="grid-item">
+                <video autoplay loop controls="false">
+                    <source src="img/vid2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="grid-item">
+                <video autoplay loop controls="false">
+                    <source src="img/vid3.mp4" type="video/mp4">
+                </video>
+            </div> 
+          </div>
+    </div>
+
+
+    <!-- carousel JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const images = [
+          'img/img1.jpg',
+          'img/img2.jpg',
+          'img/img3.jpg',
+          'img/img4.jpg',
+          'img/img5.jpg',
+          'img/img6.jpg',
+          'img/img7.jpg'
+        ];
+    
+        let currentImageIndex = 0;
+        const slideshowContainer = document.querySelector('.slideshow-container');
+    
+        function changeImage() {
+          const nextImageIndex = (currentImageIndex + 1) % images.length;
+          const currentImage = document.createElement('img');
+          currentImage.src = images[currentImageIndex];
+          currentImage.classList.add('slideshow-image', 'fade-in');
+    
+          slideshowContainer.appendChild(currentImage);
+    
+          setTimeout(() => {
+              currentImage.style.opacity = '1';
+              setTimeout(() => {
+                  currentImage.style.opacity = '0.5';
+                  currentImage.remove();
+                  currentImageIndex = nextImageIndex;
+                  changeImage();
+              }, 4000); // Change image every 4 seconds
+          }, 50); // Show image after a short delay
+        }
+          changeImage();
+        });
+    </script>
+    
+    
     <footer class="bg-light p-2">
         <div id="Footer" class="d-flex p-2">
             <div id="Newsletter" class=" w-50 p-4">
@@ -120,5 +325,9 @@
     </footer>
 
 </body>
-
+<script>
+    function gotoCart(){
+        document.getElementById("shoppingCart").className += "d-block";
+    }
+</script>
 </html>
