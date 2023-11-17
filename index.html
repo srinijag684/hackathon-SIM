@@ -7,8 +7,14 @@
     <title>Your Home Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;1,300&display=swap');
+
+
+        *{
+            font-family: 'Raleway', sans-serift;
+        }
         body {
-            font-family: Arial, sans-serif;
+           
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -16,6 +22,27 @@
         .main-content {
             padding: 2em;
         }
+        
+        a:hover:before,
+        a:hover:after{
+        transform: translate(0,0);
+        opacity: 1;
+        }
+
+        a:hover {
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+            -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+            -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+            transition: all 0.4s ease 0s;
+        }
+        #NavigationBar, #Footer {
+            background-color: #a786df;
+            
+        }
+        #NavigationBar a, #Footer a{
+            color: #f9f8fc;
+        }
+        
     </style>
 
 </head>
@@ -28,18 +55,18 @@
             <p id="Discount" class="text-light pt-3">FREE SHIPPING FOR ALL ITEMS FROM 23 NOV TO 28 NOV! SHOP NOW</p>
             <p id="Support" class="text-light text-center pt-3 ps-3">Support    </p>
         </div>
-        <div id="NavigationBar" class="d-flex justify-content-between w-100 bg-light">
+        <div id="NavigationBar" class="d-flex justify-content-between w-100">
             <img class="" src="images/logo.png">
             <div class="d-flex justify-content-start">
-                <a href="checkout.html"  class="p-2 text-decoration-none text-dark" >Ecommerce</a>
-                <a href="/" class="p-2 text-decoration-none text-dark" >Shop</a>
-                <a href="/" class="p-2 text-decoration-none text-dark" >Stories</a>
-                <a href="/" class="p-2 text-decoration-none text-dark" >About</a>
-                <a href="/" class="p-2 text-decoration-none text-dark" >Search</a>
+                <a href="checkout.html"  class="p-2 text-decoration-none" >Ecommerce</a>
+                <a href="/" class="p-2 text-decoration-none" >Shop</a>
+                <a href="/" class="p-2 text-decoration-none" >Stories</a>
+                <a href="/" class="p-2 text-decoration-none" >About</a>
+                <a href="/" class="p-2 text-decoration-none" >Search</a>
             </div>
             <div class="d-flex justify-content-end">
-                <a href="/" class="p-2 text-decoration-none text-dark">Cart</a>
-                <a href="/" class="p-2 text-decoration-none text-dark">Login</a>
+                <a href="/" class="p-2 text-decoration-none">Cart</a>
+                <a href="/" class="p-2 text-decoration-none">Login</a>
             </div>
         </div>
     </header>
@@ -48,19 +75,7 @@
         <h2>Created by women for women</h2>
         <p>This is where you can introduce your product or service.</p>
         <button>Shop all</button>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="..." alt="First slide">
-              </div>
-              <div class="carousel-item">   
-                <img class="d-block w-100" src="..." alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="..." alt="Third slide">
-              </div>
-            </div>
-          </div>
+        
     </div>
 
     
@@ -80,25 +95,25 @@
             </div>
             <div id="Shop" class="d-flex flex-column mb-3 w-25">
                 <p class="fw-medium fs-5 text-start mb-1">Shop</p>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Leggings</a>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Sports Bra</a>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Shirts</a>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Shorts</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Leggings</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Sports Bra</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Shirts</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Shorts</a>
             </div>
             <div id="Help" class="d-flex flex-column mb-3  w-25">
                 <p class="fw-medium fs-5 text-start mb-1">Help</p>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Help Center</a>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Order Status</a>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Size Chart</a>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Returns & Warranty</a>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Contact Us</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Help Center</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Order Status</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Size Chart</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Returns & Warranty</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Contact Us</a>
             </div>
             <div id="About" class="d-flex flex-column mb-3  w-25">
                 <p class="fw-medium fs-5 text-start mb-1">About</p>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">About Us</a>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Responsibility</a>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Technology & Innovation</a>
-                <a href="" class="text-start fs-5 text-decoration-none text-secondary">Explore our stories</a>
+                <a href="" class="text-start fs-5 text-decoration-none">About Us</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Responsibility</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Technology & Innovation</a>
+                <a href="" class="text-start fs-5 text-decoration-none">Explore our stories</a>
             </div>
         </div>
         <p>Created by Harsha, Srinija, Leyi, Sylvia</p>
