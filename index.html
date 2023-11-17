@@ -47,7 +47,7 @@
         }
 
         section{
-            height:50vh;
+            height:80vh;
         }
         /************** Slideshow Background **************/
 
@@ -57,7 +57,7 @@
             top: 100;
             left: 0;
             width: 100%;
-            height: 50%;
+            height: 80%;
             overflow: hidden;
         }
 
@@ -157,6 +157,9 @@
             color: #7e80ea;
         }
         
+        #shopbutton{
+            height:80px;
+        }
     </style>
 
 </head>
@@ -170,17 +173,17 @@
             <p id="Support" class="text-light text-center pt-3 ps-3">Support    </p>
         </div>
         <div id="NavigationBar" class="d-flex justify-content-between w-100">
-            <img class="w-25 h-25" src="img/logo.png">
+            <a href="index.html"><img class="w-25 h-25" src="img/logo.png"></a>
             <div class="d-flex justify-content-start">
-                <a href="checkout.html"  class="p-2 text-decoration-none fs-6" >Ecommerce</a>
-                <a href="product catalog.html" class="p-2 text-decoration-none fs-6" >Shop</a>
-                <a href="" class="p-2 text-decoration-none fs-5" >Stories</a>
-                <a href="" class="p-2 text-decoration-none fs-5" >About</a>
-                <a href="" class="p-2 text-decoration-none fs-5" >Search</a>
+                <a href="checkout.html"  class="p-2 text-decoration-none fs-1 pt-5" >Check Out</a>
+                <a href="product catalog.html" class="p-2 text-decoration-none fs-1 pt-5" >Shop</a>
+                <a href="" class="p-2 text-decoration-none fs-1 pt-5" >Stories</a>
+                <a href="" class="p-2 text-decoration-none fs-1 pt-5" >About</a>
+                <a href="" class="p-2 text-decoration-none fs-1 pt-5" >Search</a>
             </div>
             <div class="d-flex justify-content-end">
-                <a onclick="gotoCart()" class="p-2 text-decoration-none">Cart</a>
-                <a href="/" class="p-2 text-decoration-none">Login</a>
+                <a onclick="gotoCart()" class="p-2 text-decoration-none fs-1 pt-5">Cart</a>
+                <a href="/" class="p-2 text-decoration-none fs-1 pt-5">Login</a>
             </div>
         </div>
     </header>
@@ -189,7 +192,7 @@
         <div class="w-75">
             <h2>Created by women for women</h2>
             <p>This is where you can introduce your product or service.</p>
-            <button>Shop all</button>
+            <button id="shopbutton" class="bg-white border-1px w-25 fs-3">Shop all</button>
         </div>
         <div class="w-25">
             <iframe src="cart.html" id="shoppingCart" style="width: 400px; height: 1000px; display: none;"></iframe>
@@ -250,13 +253,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
         const images = [
-          'img/img1.jpg',
-          'img/img2.jpg',
-          'img/img3.jpg',
-          'img/img4.jpg',
-          'img/img5.jpg',
-          'img/img6.jpg',
-          'img/img7.jpg'
+          'img/slideshow1.jpg',
+          'img/slideshow2.jpg',
+          'img/slideshow3.jpg',
+          'img/slideshow4.jpg',
+          'img/slideshow5.jpg',
+          'img/slideshow6.jpg',
+          'img/slideshow7.jpg'
         ];
     
         let currentImageIndex = 0;

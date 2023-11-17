@@ -52,7 +52,7 @@
                 transform: scale(1.1);
                 box-shadow: 0 0 15px #a786df;
             }
-            p, button{
+            body p, body button{
                 font-size: xx-large;
             }
             h5{
@@ -80,13 +80,13 @@
             <p id="Support" class="text-light text-center pt-3 ps-3">Support    </p>
         </div>
         <div id="NavigationBar" class="d-flex justify-content-between w-100">
-            <img class="" src="images/logo.png">
+            <img class="w-25" src="img/logo.png">
             <div class="d-flex justify-content-start">
-                <a href="checkout.html"  class="p-2 text-decoration-none" >Ecommerce</a>
-                <a href="/" class="p-2 text-decoration-none" >Shop</a>
-                <a href="/" class="p-2 text-decoration-none" >Stories</a>
-                <a href="/" class="p-2 text-decoration-none" >About</a>
-                <a href="/" class="p-2 text-decoration-none" >Search</a>
+                <a href="checkout.html"  class="p-2 text-decoration-none fs-1 pt-5" >Check Out</a>
+                <a href="/" class="p-2 text-decoration-none fs-1 pt-5" >Shop</a>
+                <a href="/" class="p-2 text-decoration-none fs-1 pt-5" >Stories</a>
+                <a href="/" class="p-2 text-decoration-none fs-1 pt-5" >About</a>
+                <a href="/" class="p-2 text-decoration-none fs-1 pt-5" >Search</a>
             </div>
             <div class="d-flex justify-content-end">
                 <a onclick="gotoCart()" class="p-2 text-decoration-none">Cart</a>
@@ -97,20 +97,20 @@
     <body class="w-100 m-3">
         <div class="d-flex flex-row bd-highlight mb-3">
             <div id="ProductPhoto" class="w-50 h-auto">
-                <img src="mainvisual.jpg" class="w-100 h-auto">
+                <img src="img/black bra.jpg" class="w-100 h-auto">
 
             </div>
             <div id="ProductDetails" class="ms-4">
-                <h1 id="ProductName">Leggings</h1>
+                <h1 id="ProductName" class="my-2">Sports Bra</h1>
                 <h5 id="Price"> $30 </h5>
-                <p id="Description"> Description of the Leggings</p>
+                <p id="Description"> Description of the Sports Bra</p>
                 <p id="ColourLabel"> Colour </p>
                 <button name="colours" id="Black" class="p-2 m-2" onclick="chooseColour('Black')">Black</button>
                 <button name="colours" id="Grey" class="p-2 m-2" onclick="chooseColour('Grey')">Grey</button>
                 <button name="colours" id="White" class="p-2 m-2" onclick="chooseColour('White')">White</button>
                 <button name="colours" id="Blue" class="p-2 m-2" onclick="chooseColour('Blue')">Blue</button>
                 <button name="colours" id="Beige" class="p-2 m-2" onclick="chooseColour('Beige')">Beige</button>
-                <p id="Size">Size</p>
+                <p id="Size" class="mt-5">Size</p>
                 <button name="size" id="XS" class="p-2 m-2" onclick="chooseSize('XS')">XS</button>
                 <button name="size" id="S" class="p-2 m-2" onclick="chooseSize('S')"> S</button>
                 <button name="size" id="M" class="p-2 m-2" onclick="chooseSize('M')"> M</button>
