@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/styleLog.css" rel="stylesheet" type="text/css"/>
+  <title>Sign Up</title>
+</head>
+<body>
+  <div class="indexBackground">
+    <div class="slideshow-container"></div>
+    <div class="indexform">
+      <div id="second">
+        <div class="logo">
+          <img src="/logo.png" alt="Logo" class="img">
+        </div>
+        <h1>Sign Up</h1>
+          <div class="form-group">
+            <label for="username"> New Username </label>
+            <p><input type="text" name="username" class="form-control" id="username" placeholder="Enter New Username"></p>
+          </div>
+          <div class="form-group">
+            <label for="">New Password</label>
+            <p><input type="password" name="password" class="form-control" id="password" placeholder="Enter Password"></p>
+          </div>
+          <div class="submit btn">
+            <a href="/home.html"><button type="submit" class="mybtn"><text>Get Started</text></button></a>
+          </div>
+          <div class="login-or">
+            <hr class="hr-or">
+            <span class="span-or">or</span>
+        </div>
+        <div class="form-group">
+          <p class="text-center"><text>Already have an account? <a href="/login.html"> Sign in Here </a></text></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const images = [
+      'imgLogin/img1.jpg',
+      'imgLogin/img2.jpg',
+      'imgLogin/img3.jpg',
+      'imgLogin/img4.jpg',
+      'imgLogin/img5.jpg',
+      'imgLogin/img6.jpg',
+      'imgLogin/img7.jpg'
+    ];
+
+    let currentImageIndex = 0;
+    const slideshowContainer = document.querySelector('.slideshow-container');
+
+    function changeImage() {
+      const nextImageIndex = (currentImageIndex + 1) % images.length;
+      const currentImage = document.createElement('img');
+      currentImage.src = images[currentImageIndex];
+      currentImage.classList.add('slideshow-image', 'fade-in');
+
+      slideshowContainer.appendChild(currentImage);
+
+      setTimeout(() => {
+          currentImage.style.opacity = '0.4';
+          setTimeout(() => {
+              currentImage.style.opacity = '0';
+              currentImage.remove();
+              currentImageIndex = nextImageIndex;
+              changeImage();
+          }, 4000); // Change image every 4 seconds
+      }, 50); // Show image after a short delay
+    }
+      changeImage();
+    });
+  </script>
+
+
+</body>
+</html>

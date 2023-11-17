@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;1,300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serift;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/********************* Log in css *********************/
+.indexBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+
+.indexform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    outline: 0;
+    width: 70vh;
+    height: 70vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+a{
+    text-decoration: none !important;
+}
+h1{
+    padding-bottom:30px;
+    font-size: 45px;
+    font-weight:900;
+    
+}
+
+.logo {
+    text-align: center; /* Center-align the logo and text */
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+.logo .img {
+    max-width: 100%; /* Allow the logo to adjust its size */
+}
+
+.indexform label {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+.indexform input,
+.indexform button {
+    width: 102%;
+    height: 100px;
+    font-size: 30px; /* Adjust font size to match the form */
+    padding: 10px; /* Adjust padding for spacing */
+    margin: 5px 0; /* Adjust margin for spacing */
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.submit.btn {
+    margin-top: 15px; /* Adjust the margin for spacing */
+    text-align: center;
+}
+
+.mybtn{
+    border-radius:50px;
+    border: none;
+    text-transform:uppercase;
+    background-color: rgb(64, 64, 64);
+}
+
+.submit.btn text{
+    color: #fff;
+}
+
+.login-or {
+    position: relative;
+    color: #aaa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+}
+.hr-or {
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.form-group p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.form-group text{
+    font-size: 30px;
+}
+
+/* Center the content inside the form */
+#first, #second{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+
+/************** Slideshow Background **************/
+
+/* Style for the slideshow container */
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Style for individual slideshow images */
+.slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
