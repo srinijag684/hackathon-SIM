@@ -58,6 +58,9 @@
   </style>
 </head>
 <body>
+  <div class="w-25">
+    <iframe src="cart.html" id="shoppingCart" style="width: 400px; height: 1000px; display: none;"></iframe>
+</div>
     <header>
         <div id="DiscountBar" class="d-flex justify-content-around w-100 h-50 bg-dark">
             <p id="Prices" class="text-light text-center pt-3 ps-3">SGD</p>
@@ -74,7 +77,7 @@
                 <a href="/" class="p-2 text-decoration-none fs-1 pt-5" >Search</a>
             </div>
             <div class="d-flex justify-content-end">
-                <a href="/" class="p-2 text-decoration-none fs-1 pt-5">Cart</a>
+                <a onclick="gotoCart()" class="p-2 text-decoration-none fs-1 pt-5">Cart</a>
                 <a href="/" class="p-2 text-decoration-none fs-1 pt-5">Login</a>
             </div>
         </div>
@@ -226,5 +229,12 @@
 </footer>
 
 
+
 </body>
+<script>
+  function gotoCart(){
+      document.getElementById("shoppingCart").className += "d-block";
+  }
+</script>
+
 </html>
